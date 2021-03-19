@@ -19,3 +19,16 @@ class JSONEncoder(json.JSONEncoder):
 
 # MongoDb config
 connection = "mongodb+srv://cluster0.lwy14.mongodb.net/snapup"
+client = MongoClient(connection)
+db = client['snapup']
+collection = db['items']
+
+# BluePrints connect functionality to the main component
+indexRoute = Blueprint('index', __name__)
+
+# routes
+
+
+@indexRoute.route('/api/items')
+def index():
+    return jsonify(data='something')
