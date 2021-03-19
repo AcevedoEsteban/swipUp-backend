@@ -18,7 +18,7 @@ class JSONEncoder(json.JSONEncoder):
 
 
 # MongoDb config
-connection = "mongodb+srv://cluster0.lwy14.mongodb.net/snapup"
+connection = "mongodb+srv://snapup:password12345@cluster0.lwy14.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 client = MongoClient(connection)
 db = client['snapup']
 collection = db['items']
