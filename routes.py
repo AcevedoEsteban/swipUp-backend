@@ -25,10 +25,17 @@ collection = db['items']
 
 # BluePrints connect functionality to the main component
 indexRoute = Blueprint('index', __name__)
-
+create = BluePrint('create', __name__)
 # routes
 
 
 @indexRoute.route('/api/items')
 def index():
     return jsonify(data='something')
+
+
+@createRoute.route('/api/create',  method=['POST'])
+def create():
+
+
+print(request.json, flush=True)
